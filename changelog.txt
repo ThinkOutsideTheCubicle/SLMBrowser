@@ -2,4 +2,4 @@
 - initial release
 - brief rudimentary search and featured Items page listings
 - image quality settings
-- windows release needs the bundled cURL release (see releases)
+- windows release is bundled with cURL (version: 7.56.1 - SSL enabled SSH enabled provided by: Viktor Szakáts)
