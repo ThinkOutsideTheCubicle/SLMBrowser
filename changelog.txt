@@ -1,0 +1,4 @@
+--> v 0.0.1-pre-alpha-stable
+- initial release
+- brief rudimentary search and featured Items page listings
+- image quality settings
