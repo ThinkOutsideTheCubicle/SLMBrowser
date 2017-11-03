@@ -5,7 +5,7 @@ This repository contains software wich is a project of a currently program.
 You can download and use it freely, because it is licensed through GNU GPLv3.
 This basicly means it is OpenSource and free of charge but is provided as-is without any warrant.
 
-see LICENSE and LICENSE_addendum for more informations
+see LICENSE and LICENSE-addendum for more informations
 (audiovisual content may be licensed differently!)
 
 If you wish you can help supporting that project by giving feedback, report issues or bugs.
