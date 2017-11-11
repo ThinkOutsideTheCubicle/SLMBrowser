@@ -1,0 +1,1019 @@
+[gd_scene load_steps=44 format=1]
+
+[ext_resource path="res://infoPanel.gd" type="Script" id=1]
+[ext_resource path="res://assets/scenes/menuPanel_dark.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Fonts/exo2.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://assets/images/empty.png" type="Texture" id=4]
+[ext_resource path="res://buttonHandler.gd" type="Script" id=5]
+[ext_resource path="res://assets/images/prev_h.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/prev.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/next_h.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/next.png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "hide"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel/prodImage:visibility/visible")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel/prodImage:visibility/self_opacity")
+tracks/1/interp = 2
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel/prodImage:visibility/visible")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel/prodImage:visibility/self_opacity")
+tracks/1/interp = 2
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Theme" id=3]
+
+default_font = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxTexture" id=10]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxTexture" id=12]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxTexture" id=16]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=18]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxTexture" id=22]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=23]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=24]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=25]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="CanvasItemMaterial" id=26]
+
+shader/shading_mode = 0
+
+[sub_resource type="StyleBoxTexture" id=27]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 6 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=28]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 6 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=29]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 7 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=30]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 8 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=31]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 8 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=32]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 9 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=33]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxEmpty" id=34]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[node name="infoNode" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/hide = SubResource( 1 )
+anims/show = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Panel" parent="." instance=ExtResource( 2 )]
+
+anchor/right = 1
+anchor/bottom = 1
+theme/theme = SubResource( 3 )
+margin/right = 140.0
+margin/bottom = 90.0
+
+[node name="titleLabel" type="Label" parent="Panel"]
+
+anchor/right = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 190.0
+margin/bottom = 30.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Title"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="relTitleLabel" type="Label" parent="Panel"]
+
+anchor/top = 2
+anchor/right = 1
+anchor/bottom = 2
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 10.0
+margin/top = 0.705882
+margin/right = 10.0
+margin/bottom = 0.745098
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "related Items"
+autowrap = true
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="closeButton" type="Button" parent="Panel"]
+
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 30.0
+margin/right = 10.0
+margin/bottom = 10.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_colors/font_color_hover = Color( 0.72549, 1, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "close"
+flat = false
+script/script = ExtResource( 5 )
+
+[node name="reloadButton" type="Button" parent="Panel"]
+
+anchor/left = 1
+anchor/right = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 190.0
+margin/top = 10.0
+margin/right = 130.0
+margin/bottom = 30.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_colors/font_color_hover = Color( 0.72549, 1, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "reload"
+flat = false
+script/script = ExtResource( 5 )
+
+[node name="storeLabel" type="RichTextLabel" parent="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 90.0
+margin/right = 220.0
+margin/bottom = 150.0
+bbcode/enabled = true
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="storeImage" type="TextureButton" parent="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 40.0
+margin/right = 220.0
+margin/bottom = 80.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+params/resize_mode = 1
+params/stretch_mode = 6
+script/script = ExtResource( 5 )
+
+[node name="openButton" type="Button" parent="Panel"]
+
+anchor/left = 1
+anchor/right = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 130.0
+margin/top = 10.0
+margin/right = 10.0
+margin/bottom = 30.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_colors/font_color_hover = Color( 0.72549, 1, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "open in Browser"
+flat = false
+script/script = ExtResource( 5 )
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+
+anchor/right = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 230.0
+margin/top = 40.0
+margin/right = 10.0
+margin/bottom = 150.0
+custom_styles/bg = SubResource( 7 )
+
+[node name="infoLabel" type="RichTextLabel" parent="Panel"]
+
+anchor/right = 1
+anchor/bottom = 2
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 160.0
+margin/right = 10.0
+margin/bottom = 0.686275
+custom_colors/selection_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+bbcode/enabled = true
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="prodList" type="ItemList" parent="Panel"]
+
+anchor/top = 2
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 0.745098
+margin/right = 10.0
+margin/bottom = 40.0
+custom_styles/bg = SubResource( 8 )
+custom_constants/line_separation = 0
+
+[node name="prodImage" type="TextureButton" parent="Panel"]
+
+visibility/visible = false
+visibility/self_opacity = 0.0
+anchor/right = 1
+anchor/bottom = 1
+hint/tooltip = "hint"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 40.0
+margin/right = 10.0
+margin/bottom = 40.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+params/resize_mode = 1
+params/stretch_mode = 6
+script/script = ExtResource( 5 )
+
+[node name="prodPanel" type="Panel" parent="Panel"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 160.0
+margin/right = 10.0
+margin/bottom = 40.0
+custom_styles/panel = SubResource( 9 )
+
+[node name="prodTree" type="Tree" parent="Panel/prodPanel"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 30.0
+margin/right = 0.0
+margin/bottom = 50.0
+custom_styles/title_button_normal = SubResource( 10 )
+custom_styles/bg = SubResource( 11 )
+
+[node name="itemsCountButton" type="OptionButton" parent="Panel/prodPanel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 80.0
+margin/bottom = 20.0
+custom_styles/hover = SubResource( 12 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
+custom_colors/font_color_hover = Color( 0.72549, 1, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+script/script = ExtResource( 5 )
+
+[node name="sortbyButton" type="OptionButton" parent="Panel/prodPanel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 90.0
+margin/top = 0.0
+margin/right = 260.0
+margin/bottom = 20.0
+custom_styles/hover = SubResource( 16 )
+custom_styles/focus = SubResource( 17 )
+custom_styles/disabled = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+custom_colors/font_color_hover = Color( 0.72549, 1, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+script/script = ExtResource( 5 )
+
+[node name="searchLabel" type="Label" parent="Panel/prodPanel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 270.0
+margin/top = 0.0
+margin/right = 330.0
+margin/bottom = 20.0
+custom_colors/font_color = Color( 0.457031, 0.457031, 0.457031, 1 )
+text = "search:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="searchEdit" type="LineEdit" parent="Panel/prodPanel"]
+
+anchor/right = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 330.0
+margin/top = 0.0
+margin/right = 110.0
+margin/bottom = 20.0
+custom_styles/read_only = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/normal = SubResource( 22 )
+placeholder/text = "..."
+placeholder/alpha = 0.6
+focus_mode = 1
+caret/caret_blink = true
+caret/caret_blink_speed = 0.65
+
+[node name="searchButton" type="Button" parent="Panel/prodPanel"]
+
+anchor/left = 1
+anchor/right = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 110.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 20.0
+custom_styles/hover = SubResource( 23 )
+custom_styles/disabled = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+custom_colors/font_color_hover = Color( 0.72549, 1, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "search"
+flat = false
+script/script = ExtResource( 5 )
+
+[node name="prevButton" type="Button" parent="Panel/prodPanel"]
+
+editor/display_folded = true
+material/material = SubResource( 26 )
+anchor/top = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 40.0
+margin/right = 40.0
+margin/bottom = 0.0
+custom_styles/hover = SubResource( 27 )
+custom_styles/pressed = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+
+[node name="TextureFrame" type="TextureFrame" parent="Panel/prodPanel/prevButton"]
+
+visibility/visible = false
+visibility/opacity = 0.5
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 0
+
+[node name="nextButton" type="Button" parent="Panel/prodPanel"]
+
+editor/display_folded = true
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 40.0
+margin/top = 40.0
+margin/right = 0.0
+margin/bottom = 0.0
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+
+[node name="TextureFrame" type="TextureFrame" parent="Panel/prodPanel/nextButton"]
+
+visibility/visible = false
+visibility/opacity = 0.5
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel/prodPanel"]
+
+editor/display_folded = true
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 50.0
+margin/top = 40.0
+margin/right = 50.0
+margin/bottom = 20.0
+custom_styles/fg = SubResource( 33 )
+custom_styles/bg = SubResource( 34 )
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+percent/visible = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="pLabel" type="Label" parent="Panel/prodPanel/ProgressBar"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+custom_colors/font_color = Color( 0.72549, 1, 1, 1 )
+text = "... starting up, please be patient!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="pagesSlider" type="HSlider" parent="Panel/prodPanel"]
+
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 50.0
+margin/top = 20.0
+margin/right = 50.0
+margin/bottom = 4.0
+range/min = 1.0
+range/max = 2.0
+range/step = 1.0
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 0
+
+[connection signal="pressed" from="Panel/closeButton" to="Panel/closeButton" method="_on_closeButton_pressed"]
+
+[connection signal="pressed" from="Panel/reloadButton" to="Panel/reloadButton" method="_on_reloadButton_pressed"]
+
+[connection signal="meta_clicked" from="Panel/storeLabel" to="." method="_on_storeLabel_meta_clicked"]
+
+[connection signal="pressed" from="Panel/storeImage" to="Panel/storeImage" method="_on_storeImage_pressed"]
+
+[connection signal="pressed" from="Panel/openButton" to="Panel/openButton" method="_on_openButton_pressed"]
+
+[connection signal="focus_enter" from="Panel/ItemList" to="." method="_on_ItemList_focus_enter"]
+
+[connection signal="item_selected" from="Panel/ItemList" to="." method="_on_ItemList_item_selected"]
+
+[connection signal="meta_clicked" from="Panel/infoLabel" to="." method="_on_infoLabel_meta_clicked"]
+
+[connection signal="item_selected" from="Panel/prodList" to="." method="_on_prodList_item_selected"]
+
+[connection signal="pressed" from="Panel/prodImage" to="Panel/prodImage" method="_on_prodImage_pressed"]
+
+[connection signal="item_selected" from="Panel/prodPanel/prodTree" to="." method="_on_prodTree_item_selected"]
+
+[connection signal="text_entered" from="Panel/prodPanel/searchEdit" to="." method="_on_searchEdit_text_entered"]
+
+[connection signal="pressed" from="Panel/prodPanel/searchButton" to="Panel/prodPanel/searchButton" method="_on_searchButton_pressed"]
+
+[connection signal="button_down" from="Panel/prodPanel/prevButton" to="Panel/prodPanel/prevButton" method="_on_prevButton_button_down"]
+
+[connection signal="button_up" from="Panel/prodPanel/prevButton" to="Panel/prodPanel/prevButton" method="_on_prevButton_button_up"]
+
+[connection signal="pressed" from="Panel/prodPanel/prevButton" to="Panel/prodPanel/prevButton" method="_on_prevButton_pressed"]
+
+[connection signal="button_down" from="Panel/prodPanel/nextButton" to="Panel/prodPanel/nextButton" method="_on_nextButton_button_down"]
+
+[connection signal="button_up" from="Panel/prodPanel/nextButton" to="Panel/prodPanel/nextButton" method="_on_nextButton_button_up"]
+
+[connection signal="pressed" from="Panel/prodPanel/nextButton" to="Panel/prodPanel/nextButton" method="_on_nextButton_pressed"]
+
+[connection signal="input_event" from="Panel/prodPanel/pagesSlider" to="." method="_on_pagesSlider_input_event"]
+
+

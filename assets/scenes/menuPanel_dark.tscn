@@ -1,0 +1,257 @@
+[gd_scene load_steps=14 format=1]
+
+[ext_resource path="res://assets/images/menuBG_dark.png" type="Texture" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="AtlasTexture" id=4]
+
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 100, 100 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=5]
+
+atlas = ExtResource( 1 )
+region = Rect2( 100, 0, 100, 100 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=6]
+
+atlas = ExtResource( 1 )
+region = Rect2( 100, 200, 100, 100 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=7]
+
+atlas = ExtResource( 1 )
+region = Rect2( 0, 100, 100, 100 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=8]
+
+atlas = ExtResource( 1 )
+region = Rect2( 100, 100, 100, 100 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=9]
+
+atlas = ExtResource( 1 )
+region = Rect2( 200, 100, 100, 100 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=10]
+
+atlas = ExtResource( 1 )
+region = Rect2( 200, 0, 100, 100 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=11]
+
+atlas = ExtResource( 1 )
+region = Rect2( 200, 200, 100, 100 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=12]
+
+atlas = ExtResource( 1 )
+region = Rect2( 0, 200, 100, 100 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[node name="Panel" type="Panel"]
+
+rect/min_size = Vector2( 80, 80 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 120.0
+margin/bottom = 120.0
+custom_styles/panelf = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
+custom_styles/panelnc = SubResource( 3 )
+
+[node name="topLeft" type="TextureFrame" parent="."]
+
+visibility/opacity = 0.9
+visibility/light_mask = 0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = SubResource( 4 )
+expand = true
+stretch_mode = 0
+
+[node name="topCenter" type="TextureFrame" parent="."]
+
+visibility/opacity = 0.9
+visibility/light_mask = 0
+anchor/right = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 40.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = SubResource( 5 )
+expand = true
+stretch_mode = 0
+
+[node name="bottomCenter" type="TextureFrame" parent="."]
+
+visibility/opacity = 0.9
+visibility/light_mask = 0
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 40.0
+margin/top = 40.0
+margin/right = 40.0
+margin/bottom = 0.0
+texture = SubResource( 6 )
+expand = true
+stretch_mode = 0
+
+[node name="leftCenter" type="TextureFrame" parent="."]
+
+visibility/opacity = 0.9
+visibility/light_mask = 0
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 40.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = SubResource( 7 )
+expand = true
+stretch_mode = 0
+
+[node name="middleCenter" type="TextureFrame" parent="."]
+
+visibility/opacity = 0.9
+visibility/light_mask = 0
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 40.0
+margin/top = 40.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = SubResource( 8 )
+expand = true
+stretch_mode = 0
+
+[node name="rightCenter" type="TextureFrame" parent="."]
+
+visibility/opacity = 0.9
+visibility/light_mask = 0
+anchor/left = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 40.0
+margin/top = 40.0
+margin/right = 0.0
+margin/bottom = 40.0
+texture = SubResource( 9 )
+expand = true
+stretch_mode = 0
+
+[node name="topRight" type="TextureFrame" parent="."]
+
+visibility/opacity = 0.9
+visibility/light_mask = 0
+anchor/left = 1
+anchor/right = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 40.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 40.0
+texture = SubResource( 10 )
+expand = true
+stretch_mode = 0
+
+[node name="bottomRight" type="TextureFrame" parent="."]
+
+visibility/opacity = 0.9
+visibility/light_mask = 0
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 40.0
+margin/top = 40.0
+margin/right = 0.0
+margin/bottom = 0.0
+texture = SubResource( 11 )
+expand = true
+stretch_mode = 0
+
+[node name="bottomLeft" type="TextureFrame" parent="."]
+
+visibility/opacity = 0.9
+visibility/light_mask = 0
+anchor/top = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 40.0
+margin/right = 40.0
+margin/bottom = 0.0
+texture = SubResource( 12 )
+expand = true
+stretch_mode = 0
+
+

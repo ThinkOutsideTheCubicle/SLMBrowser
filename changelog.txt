@@ -1,3 +1,16 @@
+--> v 0.0.2-alpha-unstable
+- *some* HUD improvements
+- picked "search" instead of "call Featured Page" as preferred option (ty Mur!)
+- shops that have no image will get a blank one (for shop search purposes) made by DariaLapin
+- unloadable products that are still listed will not cause any error but will throw a message
+- added a more detailed product and shop view
+- added shop view search options (items per page, sort by and search keywords)
+- product images can be zoomed by clicking on them
+- the buttons "reload" & "show html body" are included for debugging reasons
+- added Exo 2.0 font family by ndiscovered as new font (see LICENSE-addendum)
+- project folder rearangement
+- windows release is bundled with cURL (version: 7.56.1 - SSL enabled SSH enabled provided by: Viktor Szakáts)
+
 --> v 0.0.1-pre-alpha-stable
 - initial release
 - brief rudimentary search and featured Items page listings
